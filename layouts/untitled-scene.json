@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 1.1726229638177703,
+    "zoomFactor": 0.5468750000000037,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -99,8 +99,8 @@
       "name": "ScoreTXT",
       "persistentUuid": "89ac2b12-19e3-44e0-a962-187230c01421",
       "width": 128,
-      "x": 1140,
-      "y": 6,
+      "x": 1083,
+      "y": 46,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -134,8 +134,8 @@
       "name": "BlueDotBar",
       "persistentUuid": "f513d1ae-dc70-4ea4-960c-7c9cee34d559",
       "width": 304,
-      "x": 53,
-      "y": 38,
+      "x": 112,
+      "y": 55,
       "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
@@ -151,8 +151,8 @@
       "name": "UI1",
       "persistentUuid": "82215b41-92ba-4eaf-958d-55add91bbcb7",
       "width": 62,
-      "x": 455,
-      "y": 21,
+      "x": 447,
+      "y": 41,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -168,8 +168,8 @@
       "name": "UI2",
       "persistentUuid": "d0073a3a-b73b-4630-a247-9e4ef5c31349",
       "width": 58,
-      "x": 544,
-      "y": 23,
+      "x": 516,
+      "y": 45,
       "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
@@ -185,8 +185,8 @@
       "name": "UI3",
       "persistentUuid": "7bf6d808-f701-4ceb-b148-5871c6fa9fda",
       "width": 64,
-      "x": 614,
-      "y": 12,
+      "x": 580,
+      "y": 39,
       "zOrder": 9,
       "numberProperties": [],
       "stringProperties": [],
@@ -236,8 +236,8 @@
       "name": "UI4",
       "persistentUuid": "b14b123c-790b-4b98-9157-b232cfabdbd6",
       "width": 68,
-      "x": 708,
-      "y": 13,
+      "x": 658,
+      "y": 36,
       "zOrder": 12,
       "numberProperties": [],
       "stringProperties": [],
@@ -268,8 +268,8 @@
       "name": "GreenDotBar",
       "persistentUuid": "505e85e3-254c-454c-89ea-ca13b9430c04",
       "width": 146,
-      "x": 55,
-      "y": 66,
+      "x": 113,
+      "y": 85,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -352,8 +352,8 @@
       "name": "XP",
       "persistentUuid": "ea9e19d1-0ef1-475d-b51f-ba2ade8d3e83",
       "width": 0,
-      "x": 23,
-      "y": 36,
+      "x": 80,
+      "y": 55,
       "zOrder": 19,
       "numberProperties": [],
       "stringProperties": [],
@@ -368,8 +368,8 @@
       "name": "MeatPNG",
       "persistentUuid": "1af4f285-0db2-439f-9410-304f8028097d",
       "width": 0,
-      "x": 20,
-      "y": 60,
+      "x": 79,
+      "y": 79,
       "zOrder": 20,
       "numberProperties": [],
       "stringProperties": [],
@@ -2141,7 +2141,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Background",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2193,30 +2192,6 @@
                 "CursorX()",
                 "=",
                 "CursorY()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetCameraCenterX"
-              },
-              "parameters": [
-                "",
-                "=",
-                "lerp(CameraCenterX(\"UI\", 0), (ScreenWidth() / 2) + (MouseX(\"UI\", 0) - ScreenWidth() / 2) * 0.05, 0.1)",
-                "\"UI\"",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetCameraCenterY"
-              },
-              "parameters": [
-                "",
-                "=",
-                "lerp(CameraCenterY(\"UI\", 0), (ScreenHeight() / 2) + (MouseY(\"UI\", 0) - ScreenHeight() / 2) * 0.05, 0.1)",
-                "\"UI\"",
-                "0"
               ]
             }
           ]
@@ -4445,6 +4420,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Level",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5106,6 +5082,15 @@
             "",
             "\"Leaderboard\""
           ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "Fish_Player",
+            ""
+          ]
         }
       ]
     },
@@ -5313,11 +5298,12 @@
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
       "cameraType": "",
+      "defaultCameraBehavior": "do-nothing",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
       "name": "Layer",
-      "renderingType": "",
+      "renderingType": "2d",
       "visibility": true,
       "cameras": [],
       "effects": [
