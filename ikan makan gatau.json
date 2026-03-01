@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Untitled scene",
   "gdVersion": {
     "build": 259,
     "major": 5,
@@ -95,62 +95,6 @@
   "resources": {
     "resources": [
       {
-        "file": "assets/NewSprite.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "Squid Large.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Squid Large.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "Salmon Large.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Salmon Large.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "Clownfish Large.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Clownfish Large.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/tiled_Tiled Empty UI Heart.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Tiled Empty UI Heart.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/688519c5bb4abaf5805518633f2ff810928e29164497fb5c13dabf97044be843_tiled_Tiled Empty UI Heart.png",
-          "name": "tiled_Tiled Empty UI Heart.png"
-        }
-      },
-      {
-        "file": "assets/tiled_Tiled Filler UI Heart.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Tiled Filler UI Heart.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/5b5c6c85ec4e1f5b6688be565c9a06920a76ee191915738afd61da1481fd6493_tiled_Tiled Filler UI Heart.png",
-          "name": "tiled_Tiled Filler UI Heart.png"
-        }
-      },
-      {
         "file": "assets/Dot Bar Blue Border.png",
         "kind": "image",
         "metadata": "",
@@ -187,34 +131,11 @@
         }
       },
       {
-        "file": "assets/Fish_AI1.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Fish_AI1",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "Squid Large2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Squid Large2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/NewSprite2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "NewSprite2",
         "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "An underwater scene with sunrays shining and shimmering through the clear blue water - Motion stock (144p, h264).mp4",
-        "kind": "video",
-        "metadata": "",
-        "name": "An underwater scene with sunrays shining and shimmering through the clear blue water - Motion stock (144p, h264).mp4",
         "userAdded": false
       },
       {
@@ -245,10 +166,154 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite3.png",
+        "file": "assets/Fish_AI2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Fish_AI2.png\"}",
+        "name": "Fish_AI2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/UI2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite3",
+        "name": "UI2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/1.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "1",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Squid Large2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Squid Large2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "6",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "7",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Bubble.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bubble.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/12254a94cf3e8dbc4bcccadf4f2f761ee0736f0abe7405c4a419fab822ba90ca_Bubble.png",
+          "name": "Bubble.png"
+        }
+      },
+      {
+        "file": "assets/8.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/8.png\"}",
+        "name": "8",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Dot Bar Green Border.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Dot Bar Green Border.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/e0754c6008a7f3ec35ce32d663263982cd7a67f91974977d1c1247b90891b1b9_Dot Bar Green Border.png",
+          "name": "Dot Bar Green Border.png"
+        }
+      },
+      {
+        "file": "assets/Dot Bar Green Fill Bar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Dot Bar Green Fill Bar.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/11956f33bb9a6ca4997feced357ff80d8b2597367951d4ab34cd67d5a2d8b054_Dot Bar Green Fill Bar.png",
+          "name": "Dot Bar Green Fill Bar.png"
+        }
+      },
+      {
+        "file": "assets/LightGlow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "LightGlow.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/GDevelop/c17e2d500015e598624b763f4942b26e3aac96efca094cd20257a61e15b27fcb_LightGlow.png",
+          "name": "LightGlow.png"
+        }
+      },
+      {
+        "file": "assets/NewSprite4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite4.png\"}",
+        "name": "NewSprite4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite5.png\"}",
+        "name": "NewSprite5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/default.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "default",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite6",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
         "smoothed": false,
         "userAdded": false
       }
@@ -264,6 +329,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/untitled-scene"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/leaderboard"
     }
   ],
   "externalEvents": [],
@@ -287,6 +356,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/camerashake"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/smoothcamera"
     }
   ],
   "externalLayouts": []

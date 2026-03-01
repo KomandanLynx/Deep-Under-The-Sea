@@ -9,7 +9,7 @@
   "title": "",
   "v": 69,
   "uiSettings": {
-    "grid": true,
+    "grid": false,
     "gridType": "rectangular",
     "gridWidth": 32,
     "gridHeight": 32,
@@ -19,8 +19,8 @@
     "gridOffsetZ": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
-    "snap": true,
-    "zoomFactor": 0.814188120370992,
+    "snap": false,
+    "zoomFactor": 1.1726229638177703,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -71,6 +71,21 @@
       "name": "pos",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "totalfish",
+      "type": "number",
+      "value": 50
+    },
+    {
+      "name": "hunger",
+      "type": "number",
+      "value": 7
+    },
+    {
+      "name": "hungerrate",
+      "type": "number",
+      "value": 3
     }
   ],
   "instances": [
@@ -93,15 +108,16 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 119,
       "keepRatio": true,
-      "layer": "",
+      "layer": "UI",
       "name": "WinLoseTXT",
       "opacity": 0,
       "persistentUuid": "3bce3ec0-d725-4156-ae9c-7b44e93ac0d7",
-      "width": 0,
-      "x": 437,
+      "width": 1278,
+      "x": 1,
       "y": 278,
       "zOrder": 4,
       "numberProperties": [],
@@ -129,14 +145,14 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 75,
+      "height": 56,
       "keepRatio": true,
       "layer": "UI",
       "name": "UI1",
       "persistentUuid": "82215b41-92ba-4eaf-958d-55add91bbcb7",
-      "width": 69,
-      "x": 450,
-      "y": 13,
+      "width": 62,
+      "x": 455,
+      "y": 21,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -151,7 +167,7 @@
       "layer": "UI",
       "name": "UI2",
       "persistentUuid": "d0073a3a-b73b-4630-a247-9e4ef5c31349",
-      "width": 45,
+      "width": 58,
       "x": 544,
       "y": 23,
       "zOrder": 8,
@@ -199,30 +215,13 @@
       "depth": 1,
       "height": 1024,
       "keepRatio": true,
-      "layer": "",
+      "layer": "Layer",
       "name": "NewVideo",
       "persistentUuid": "9d600abe-e7b9-4674-959b-f84d27cc5c87",
       "width": 1536,
       "x": -128,
       "y": -128,
       "zOrder": -1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 49,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Fish_Player",
-      "persistentUuid": "93303985-c4c0-4c6f-b697-fb4ee1fdb217",
-      "width": 44,
-      "x": 96,
-      "y": 560,
-      "zOrder": 11,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -243,6 +242,138 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Fish_Player",
+      "persistentUuid": "1c977f2e-20d9-45c1-adf4-eb1df4e2f7bd",
+      "width": 0,
+      "x": 77,
+      "y": 271,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 64,
+      "height": 15,
+      "layer": "UI",
+      "name": "GreenDotBar",
+      "persistentUuid": "505e85e3-254c-454c-89ea-ca13b9430c04",
+      "width": 146,
+      "x": 55,
+      "y": 66,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 736,
+      "keepRatio": true,
+      "layer": "Leaderboard",
+      "name": "black",
+      "opacity": 128,
+      "persistentUuid": "5b3693f0-8dd3-4312-bce0-88bf7c9574a5",
+      "width": 1280,
+      "x": 0,
+      "y": 0,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "Leaderboard",
+      "name": "LeaderboardInput",
+      "persistentUuid": "cf13cd4a-4936-42d8-9681-73f49c8322d6",
+      "width": 0,
+      "x": 384,
+      "y": 322,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 160,
+      "keepRatio": true,
+      "layer": "Leaderboard",
+      "name": "Chklst",
+      "persistentUuid": "12db6d3a-b9c2-4dcf-82eb-1e265aa46cc9",
+      "width": 143,
+      "x": 672,
+      "y": 256,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 3,
+      "height": 87,
+      "keepRatio": true,
+      "layer": "Leaderboard",
+      "name": "Leaderboard",
+      "persistentUuid": "7438e605-dd37-4256-ad5c-2bac89ebdcc6",
+      "width": 87,
+      "x": 765,
+      "y": 290,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "UI",
+      "name": "XP",
+      "persistentUuid": "ea9e19d1-0ef1-475d-b51f-ba2ade8d3e83",
+      "width": 0,
+      "x": 23,
+      "y": 36,
+      "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "UI",
+      "name": "MeatPNG",
+      "persistentUuid": "1af4f285-0db2-439f-9410-304f8028097d",
+      "width": 0,
+      "x": 20,
+      "y": 60,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -250,7 +381,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Fish_Player",
-      "preScale": 0.3,
+      "preScale": 2.5,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -284,6 +415,58 @@
           "Scale": "Scale"
         },
         {
+          "name": "SmoothCamera",
+          "type": "SmoothCamera::SmoothCamera",
+          "LeftwardSpeed": 0.9,
+          "RightwardSpeed": 0.9,
+          "UpwardSpeed": 0.9,
+          "DownwardSpeed": 0.9,
+          "FollowOnX": true,
+          "FollowOnY": true,
+          "FollowFreeAreaLeft": 0,
+          "FollowFreeAreaRight": 0,
+          "FollowFreeAreaTop": 0,
+          "FollowFreeAreaBottom": 0,
+          "CameraOffsetX": 0,
+          "CameraOffsetY": 0,
+          "CameraDelay": 0,
+          "ForecastTime": 0,
+          "ForecastHistoryDuration": 0,
+          "LogLeftwardSpeed": 2.0247e-320,
+          "LogRightwardSpeed": 2.0247e-320,
+          "LogDownwardSpeed": 2.0247e-320,
+          "LogUpwardSpeed": 2.0247e-320,
+          "DelayedCenterX": 2.0247e-320,
+          "DelayedCenterY": 2.0247e-320,
+          "ForecastHistoryMeanX": 2.0247e-320,
+          "ForecastHistoryMeanY": 2.0247e-320,
+          "ForecastHistoryVarianceX": 2.0247e-320,
+          "ForecastHistoryCovariance": 2.0247e-320,
+          "ForecastHistoryLinearA": 2.0247e-320,
+          "ForecastHistoryLinearB": 2.0247e-320,
+          "ForecastedX": 2.0247e-320,
+          "ForecastedY": 2.0247e-320,
+          "ProjectedNewestX": 2.0247e-320,
+          "ProjectedNewestY": 2.0247e-320,
+          "ProjectedOldestX": 2.0247e-320,
+          "ProjectedOldestY": 2.0247e-320,
+          "ForecastHistoryVarianceY": 2.0247e-320,
+          "Index": 2.0247e-320,
+          "CameraDelayCatchUpSpeed": 0,
+          "CameraExtraDelay": 2.0247e-320,
+          "WaitingSpeedXMax": 2.0247e-320,
+          "WaitingSpeedYMax": 2.0247e-320,
+          "WaitingEnd": 2.0247e-320,
+          "CameraDelayCatchUpDuration": 2.0247e-320,
+          "LeftwardSpeedMax": 9000,
+          "RightwardSpeedMax": 9000,
+          "UpwardSpeedMax": 9000,
+          "DownwardSpeedMax": 9000,
+          "OldX": 9000.000000007454,
+          "OldY": 9000.000000007454,
+          "IsCalledManually": false
+        },
+        {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "acceleration": 400,
@@ -311,11 +494,12 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Squid Large.png",
+                  "image": "1",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -331,20 +515,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 4,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 0
+                        "x": 29,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 111
+                        "x": 29,
+                        "y": 23
                       },
                       {
-                        "x": 0,
-                        "y": 111
+                        "x": 4,
+                        "y": 23
                       }
                     ]
                   ]
@@ -359,11 +543,12 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Salmon Large.png",
+                  "image": "8",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -379,20 +564,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 4,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 0
+                        "x": 29,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 111
+                        "x": 29,
+                        "y": 23
                       },
                       {
-                        "x": 0,
-                        "y": 111
+                        "x": 4,
+                        "y": 23
                       }
                     ]
                   ]
@@ -407,11 +592,12 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Clownfish Large.png",
+                  "image": "7",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -427,20 +613,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 4,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 0
+                        "x": 29,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 111
+                        "x": 29,
+                        "y": 23
                       },
                       {
-                        "x": 0,
-                        "y": 111
+                        "x": 4,
+                        "y": 23
                       }
                     ]
                   ]
@@ -455,7 +641,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Fish_AI1",
-      "preScale": 0.5,
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -492,16 +678,17 @@
       ],
       "animations": [
         {
-          "name": "",
+          "name": "Squid Large2",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Squid Large2.png",
+                  "image": "Squid Large2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -517,20 +704,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 3,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 0
+                        "x": 28,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 111
+                        "x": 28,
+                        "y": 23
                       },
                       {
-                        "x": 0,
-                        "y": 111
+                        "x": 3,
+                        "y": 23
                       }
                     ]
                   ]
@@ -545,7 +732,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Fish_AI2",
-      "preScale": 0.75,
+      "preScale": 5,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -582,16 +769,17 @@
       ],
       "animations": [
         {
-          "name": "2",
+          "name": "default",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Salmon Large.png",
+                  "image": "default",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -607,20 +795,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 4,
+                        "y": 5
                       },
                       {
-                        "x": 114,
-                        "y": 0
+                        "x": 31,
+                        "y": 5
                       },
                       {
-                        "x": 114,
-                        "y": 99
+                        "x": 31,
+                        "y": 20
                       },
                       {
-                        "x": 0,
-                        "y": 99
+                        "x": 4,
+                        "y": 20
                       }
                     ]
                   ]
@@ -635,6 +823,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Fish_AI3",
+      "preScale": 6,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -671,7 +860,7 @@
       ],
       "animations": [
         {
-          "name": "3",
+          "name": "default",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -680,7 +869,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Clownfish Large.png",
+                  "image": "6",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -696,20 +885,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 1,
+                        "y": 4
                       },
                       {
-                        "x": 90,
-                        "y": 0
+                        "x": 30,
+                        "y": 4
                       },
                       {
-                        "x": 90,
-                        "y": 90
+                        "x": 30,
+                        "y": 24
                       },
                       {
-                        "x": 0,
-                        "y": 90
+                        "x": 1,
+                        "y": 24
                       }
                     ]
                   ]
@@ -780,9 +969,9 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Win Lose",
+      "string": "Game Over",
       "font": "",
-      "textAlignment": "left",
+      "textAlignment": "center",
       "characterSize": 100,
       "color": {
         "b": 255,
@@ -803,9 +992,9 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "Win Lose",
+        "text": "Game Over",
         "font": "",
-        "textAlignment": "left",
+        "textAlignment": "center",
         "verticalTextAlignment": "top",
         "characterSize": 100,
         "lineHeight": 0,
@@ -819,7 +1008,12 @@
       "variant": "Blue Dot Bar",
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "ShakeObject_PositionAngle",
+          "type": "ShakeObject::ShakeObject_PositionAngle"
+        }
+      ],
       "content": {
         "BarTopPadding": 3,
         "BarLeftPadding": 4,
@@ -829,7 +1023,7 @@
         "PreviousHighValueDuration": 0,
         "ShowLabel": false,
         "InitialValue": 0,
-        "MaxValue": 3
+        "MaxValue": 10
       }
     },
     {
@@ -889,17 +1083,16 @@
       ],
       "animations": [
         {
-          "name": "Fish_AI1",
+          "name": "default",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
-              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Fish_AI1",
+                  "image": "Fish_AI2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -915,20 +1108,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 17,
+                        "x": 7,
+                        "y": 11
+                      },
+                      {
+                        "x": 24,
+                        "y": 11
+                      },
+                      {
+                        "x": 24,
                         "y": 20
                       },
                       {
-                        "x": 46,
+                        "x": 7,
                         "y": 20
-                      },
-                      {
-                        "x": 46,
-                        "y": 43
-                      },
-                      {
-                        "x": 17,
-                        "y": 43
                       }
                     ]
                   ]
@@ -973,7 +1166,7 @@
       ],
       "animations": [
         {
-          "name": "3",
+          "name": "default",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -982,7 +1175,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Clownfish Large.png",
+                  "image": "7",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -998,20 +1191,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 1,
+                        "y": 5
                       },
                       {
-                        "x": 90,
-                        "y": 0
+                        "x": 36,
+                        "y": 5
                       },
                       {
-                        "x": 90,
-                        "y": 90
+                        "x": 36,
+                        "y": 28
                       },
                       {
-                        "x": 0,
-                        "y": 90
+                        "x": 1,
+                        "y": 28
                       }
                     ]
                   ]
@@ -1057,7 +1250,7 @@
       ],
       "animations": [
         {
-          "name": "2",
+          "name": "default",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1066,7 +1259,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Salmon Large.png",
+                  "image": "4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1082,20 +1275,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 4,
+                        "y": 5
                       },
                       {
-                        "x": 114,
-                        "y": 0
+                        "x": 30,
+                        "y": 5
                       },
                       {
-                        "x": 114,
-                        "y": 99
+                        "x": 30,
+                        "y": 20
                       },
                       {
-                        "x": 0,
-                        "y": 99
+                        "x": 4,
+                        "y": 20
                       }
                     ]
                   ]
@@ -1141,16 +1334,17 @@
       ],
       "animations": [
         {
-          "name": "",
+          "name": "UI2",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Squid Large2.png",
+                  "image": "UI2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1166,20 +1360,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 3,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 0
+                        "x": 28,
+                        "y": 9
                       },
                       {
-                        "x": 111,
-                        "y": 111
+                        "x": 28,
+                        "y": 23
                       },
                       {
-                        "x": 0,
-                        "y": 111
+                        "x": 3,
+                        "y": 23
                       }
                     ]
                   ]
@@ -1235,7 +1429,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Fish_AI1",
+                  "image": "Fish_AI2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1251,20 +1445,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 17,
+                        "x": 7,
+                        "y": 11
+                      },
+                      {
+                        "x": 24,
+                        "y": 11
+                      },
+                      {
+                        "x": 24,
                         "y": 20
                       },
                       {
-                        "x": 46,
+                        "x": 7,
                         "y": 20
-                      },
-                      {
-                        "x": 46,
-                        "y": 43
-                      },
-                      {
-                        "x": 17,
-                        "y": 43
                       }
                     ]
                   ]
@@ -1363,6 +1557,453 @@
         "volume": 0,
         "videoResource": "Free Underwater Background Video Loop 4k - Relaxing underwater video - Royalty Free Vj Loop - Motion stock (360p, h264) (online-video-cutter.com).mp4"
       }
+    },
+    {
+      "additive": false,
+      "assetStoreId": "420b9c273f595bb8b713e373dccb1c30cf827726b0b2c8f776f152342c711b0c",
+      "destroyWhenNoParticles": false,
+      "emitterAngleA": 0,
+      "emitterAngleB": 15,
+      "emitterForceMax": 500,
+      "emitterForceMin": 200,
+      "flow": 10,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 500,
+      "name": "BubblesStream",
+      "particleAlpha1": 255,
+      "particleAlpha2": 35,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 50,
+      "particleAngle2": 50,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "255;255;255",
+      "particleColor2": "255;255;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 255,
+      "particleGreen2": 255,
+      "particleLifeTimeMax": 2,
+      "particleLifeTimeMin": 1.7999999523162842,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 30,
+      "particleSize2": 60,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 1,
+      "rendererParam2": 1,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "Bubble.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 0,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "45827f5ecff9d1cc17847c948a055323dbd4ca63159a0ed696d49ddf18bd071e",
+      "name": "GreenDotBar",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Green Dot Bar",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "ShakeObject_PositionAngle",
+          "type": "ShakeObject::ShakeObject_PositionAngle"
+        }
+      ],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false,
+        "InitialValue": 10,
+        "MaxValue": 10
+      }
+    },
+    {
+      "additive": true,
+      "assetStoreId": "ce6caabbc8bee5296428f4e756868114a785fac84bbb6b22d4910a63e421c5df",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 140,
+      "emitterForceMin": 80,
+      "flow": 400,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 400,
+      "name": "BlueExplosion",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "64;255;255",
+      "particleColor2": "128;0;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 255,
+      "particleGreen2": 0,
+      "particleLifeTimeMax": 1.2,
+      "particleLifeTimeMin": 0.6,
+      "particleRed1": 64,
+      "particleRed2": 128,
+      "particleSize1": 50,
+      "particleSize2": 200,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 0,
+      "rendererParam2": 0,
+      "rendererType": "Quad",
+      "tank": 100,
+      "textureParticleName": "LightGlow.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 0,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Chklst",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8,
+                        "y": 10
+                      },
+                      {
+                        "x": 23,
+                        "y": 10
+                      },
+                      {
+                        "x": 23,
+                        "y": 20
+                      },
+                      {
+                        "x": 8,
+                        "y": 20
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "LeaderboardInput",
+      "type": "TextInput::TextInputObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "initialValue": "",
+        "placeholder": "Touch to start typing",
+        "fontResourceName": "",
+        "fontSize": 20,
+        "inputType": "text",
+        "textColor": "0;0;0",
+        "fillColor": "255;255;255",
+        "fillOpacity": 255,
+        "borderColor": "0;0;0",
+        "borderOpacity": 255,
+        "borderWidth": 1,
+        "readOnly": false,
+        "disabled": false,
+        "spellCheck": false,
+        "paddingX": 2,
+        "paddingY": 1,
+        "textAlign": "left",
+        "maxLength": 0
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "black",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Leaderboard",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 9,
+                        "y": 7
+                      },
+                      {
+                        "x": 24,
+                        "y": 7
+                      },
+                      {
+                        "x": 24,
+                        "y": 25
+                      },
+                      {
+                        "x": 9,
+                        "y": 25
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "XP",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "XP",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "XP",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MeatPNG",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 2
+          },
+          "stringParameters": {
+            "color": "0;0;0"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 5,
+                        "y": 9
+                      },
+                      {
+                        "x": 28,
+                        "y": 9
+                      },
+                      {
+                        "x": 28,
+                        "y": 20
+                      },
+                      {
+                        "x": 5,
+                        "y": 20
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1370,6 +2011,12 @@
     "children": [
       {
         "objectName": "Fish_Player"
+      },
+      {
+        "objectName": "GreenDotBar"
+      },
+      {
+        "objectName": "BlueExplosion"
       },
       {
         "objectName": "Fish_AI0"
@@ -1382,6 +2029,9 @@
       },
       {
         "objectName": "Fish_AI3"
+      },
+      {
+        "objectName": "Leaderboard"
       },
       {
         "objectName": "UI1"
@@ -1414,7 +2064,25 @@
         "objectName": "NewVideo"
       },
       {
+        "objectName": "XP"
+      },
+      {
         "objectName": "NewVideo2"
+      },
+      {
+        "objectName": "BubblesStream"
+      },
+      {
+        "objectName": "Chklst"
+      },
+      {
+        "objectName": "black"
+      },
+      {
+        "objectName": "LeaderboardInput"
+      },
+      {
+        "objectName": "MeatPNG"
       }
     ]
   },
@@ -1442,14 +2110,6 @@
             }
           ],
           "actions": [
-            {
-              "type": {
-                "value": "HideCursor"
-              },
-              "parameters": [
-                ""
-              ]
-            },
             {
               "type": {
                 "value": "Video::Play"
@@ -1481,6 +2141,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Background",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1508,6 +2169,17 @@
                 "BlueDotBar",
                 "=",
                 "currentprogress",
+                "score"
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+              },
+              "parameters": [
+                "GreenDotBar",
+                "=",
+                "hunger",
                 "score"
               ]
             },
@@ -1592,6 +2264,7 @@
           ]
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1657,7 +2330,7 @@
               "parameters": [
                 "",
                 "Fish_AI0",
-                "Fish_AI0.pos",
+                "CameraHeight()",
                 "RandomInRange(1, 1300)",
                 ""
               ]
@@ -1711,6 +2384,7 @@
           ]
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1830,6 +2504,7 @@
           ]
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2246,6 +2921,189 @@
                     "0.1",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Fish_Player",
+                    "Fish_AI1",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "currentlevel",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Fish_AI1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "score",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "currentprogress",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngleScale::ShakeObject_PositionAngleScale"
+                  },
+                  "parameters": [
+                    "ScoreTXT",
+                    "ShakeObject_PositionAngleScale",
+                    "0.1",
+                    "0",
+                    "0",
+                    "50",
+                    "0",
+                    "0.1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "nahtt-eat-323883.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CameraShake::ShakeCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "0.1",
+                    "0.1",
+                    "0.1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
                 }
               ]
             },
@@ -2339,6 +3197,47 @@
                     "1",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Leaderboard\""
+                  ]
                 }
               ]
             },
@@ -2431,6 +3330,47 @@
                     "1",
                     "1",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Leaderboard\""
                   ]
                 }
               ]
@@ -2456,6 +3396,135 @@
                   },
                   "parameters": [
                     "Fish_Player",
+                    "Fish_AI0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "currentlevel",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Fish_AI0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "score",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "currentprogress",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngleScale::ShakeObject_PositionAngleScale"
+                  },
+                  "parameters": [
+                    "ScoreTXT",
+                    "ShakeObject_PositionAngleScale",
+                    "0.1",
+                    "0",
+                    "0",
+                    "50",
+                    "0",
+                    "0.1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "nahtt-eat-323883.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Fish_Player",
                     "Fish_AI1",
                     "",
                     "",
@@ -2529,6 +3598,177 @@
                     "nahtt-eat-323883.mp3",
                     "",
                     "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Fish_Player",
+                    "Fish_AI2",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "currentlevel",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Fish_AI2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "score",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "currentprogress",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngleScale::ShakeObject_PositionAngleScale"
+                  },
+                  "parameters": [
+                    "ScoreTXT",
+                    "ShakeObject_PositionAngleScale",
+                    "0.1",
+                    "0",
+                    "0",
+                    "50",
+                    "0",
+                    "0.1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "nahtt-eat-323883.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
                     "1"
                   ]
                 }
@@ -2612,6 +3852,57 @@
                     "100",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Leaderboard\""
+                  ]
                 }
               ]
             }
@@ -2627,6 +3918,264 @@
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Fish_Player",
+                    "Fish_AI0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "currentlevel",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Fish_AI0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "score",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "currentprogress",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngleScale::ShakeObject_PositionAngleScale"
+                  },
+                  "parameters": [
+                    "ScoreTXT",
+                    "ShakeObject_PositionAngleScale",
+                    "0.1",
+                    "0",
+                    "0",
+                    "50",
+                    "0",
+                    "0.1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "nahtt-eat-323883.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Fish_Player",
+                    "Fish_AI1",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "currentlevel",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Fish_AI1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "score",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "currentprogress",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngleScale::ShakeObject_PositionAngleScale"
+                  },
+                  "parameters": [
+                    "ScoreTXT",
+                    "ShakeObject_PositionAngleScale",
+                    "0.1",
+                    "0",
+                    "0",
+                    "50",
+                    "0",
+                    "0.1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "nahtt-eat-323883.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -2711,6 +4260,177 @@
                     "100",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Fish_Player",
+                    "Fish_AI3",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "currentlevel",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Fish_AI3",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "score",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "currentprogress",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngleScale::ShakeObject_PositionAngleScale"
+                  },
+                  "parameters": [
+                    "ScoreTXT",
+                    "ShakeObject_PositionAngleScale",
+                    "0.1",
+                    "0",
+                    "0",
+                    "50",
+                    "0",
+                    "0.1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "nahtt-eat-323883.mp3",
+                    "",
+                    "100",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "BlueDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                  },
+                  "parameters": [
+                    "GreenDotBar",
+                    "ShakeObject_PositionAngle",
+                    "0.25",
+                    "0",
+                    "0",
+                    "16",
+                    "0.08",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "hunger",
+                    "+",
+                    "1"
+                  ]
                 }
               ]
             }
@@ -2725,7 +4445,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Level",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2738,9 +4457,19 @@
                 "value": "NumberVariable"
               },
               "parameters": [
+                "currentlevel",
+                "<",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
                 "currentprogress",
                 ">=",
-                "3"
+                "10"
               ]
             },
             {
@@ -2812,8 +4541,8 @@
               "parameters": [
                 "Fish_Player",
                 "Scale",
-                "+",
-                "1"
+                "=",
+                "2.5"
               ]
             },
             {
@@ -2823,6 +4552,16 @@
               "parameters": [
                 "Fish_AI2",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "hungerrate",
+                "=",
+                "2"
               ]
             }
           ]
@@ -2866,8 +4605,8 @@
               "parameters": [
                 "Fish_Player",
                 "Scale",
-                "+",
-                "1"
+                "=",
+                "2.5"
               ]
             },
             {
@@ -2877,6 +4616,16 @@
               "parameters": [
                 "Fish_AI3",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "hungerrate",
+                "=",
+                "1"
               ]
             }
           ]
@@ -3107,9 +4856,508 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "RepeatEveryXSeconds::Repeat"
+          },
+          "parameters": [
+            "",
+            "\"plankton1\"",
+            "1",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Fish_AI0",
+            "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + Random(CameraWidth(\"\", 0))",
+            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + Random(CameraHeight(\"\", 0))",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "RepeatEveryXSeconds::Repeat"
+          },
+          "parameters": [
+            "",
+            "\"squid\"",
+            "5",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "is_gamerun",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "currentlevel",
+            "=",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Fish_AI0",
+            "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + Random(CameraWidth(\"\", 0))",
+            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + Random(CameraHeight(\"\", 0))",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Fish_AI2",
+            "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + Random(CameraWidth(\"\", 0))",
+            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + Random(CameraHeight(\"\", 0))",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "RepeatEveryXSeconds::Repeat"
+          },
+          "parameters": [
+            "",
+            "\"tuna\"",
+            "5",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "is_gamerun",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "currentlevel",
+            "=",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Fish_AI1",
+            "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + Random(CameraWidth(\"\", 0))",
+            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + Random(CameraHeight(\"\", 0))",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Fish_AI3",
+            "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + Random(CameraWidth(\"\", 0))",
+            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + Random(CameraHeight(\"\", 0))",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "RepeatEveryXSeconds::Repeat"
+          },
+          "parameters": [
+            "",
+            "\"clownfish\"",
+            "5",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "is_gamerun",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "currentlevel",
+            "=",
+            "3"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Fish_AI2",
+            "CameraCenterX(\"\", 0) - CameraWidth(\"\", 0) / 2 + Random(CameraWidth(\"\", 0))",
+            "CameraCenterY(\"\", 0) - CameraHeight(\"\", 0) / 2 + Random(CameraHeight(\"\", 0))",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "hunger",
+            "<",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "WinLoseTXT",
+            "Opacity",
+            "=",
+            "255"
+          ]
+        },
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "WinLoseTXT",
+            "Text",
+            "=",
+            "\"Game Over\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ShowLayer"
+          },
+          "parameters": [
+            "",
+            "\"Leaderboard\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberVariable"
+          },
+          "parameters": [
+            "hunger",
+            ">=",
+            "10"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "hunger",
+            "=",
+            "10"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "RepeatEveryXSeconds::Repeat"
+          },
+          "parameters": [
+            "",
+            "\"hunger\"",
+            "hungerrate",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "hunger",
+            "-",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+          },
+          "parameters": [
+            "GreenDotBar",
+            "ShakeObject_PositionAngle",
+            "0.25",
+            "0",
+            "0",
+            "16",
+            "0.08",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Leaderboard",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Chklst",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Leaderboards::SavePlayerScore"
+              },
+              "parameters": [
+                "",
+                "\"86cf0b3c-2e8c-4d37-b8c5-e607096d8012\"",
+                "score",
+                "LeaderboardInput.Text()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "Leaderboard",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Leaderboards::DisplayLeaderboard"
+              },
+              "parameters": [
+                "",
+                "\"86cf0b3c-2e8c-4d37-b8c5-e607096d8012\"",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Leaderboards::IsLeaderboardViewLoaded"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PushScene"
+              },
+              "parameters": [
+                "",
+                "\"leaderboard\""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
     }
   ],
   "layers": [
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Layer",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Ambient Hemisphere Light",
+          "doubleParameters": {
+            "elevation": 40,
+            "intensity": 0.33,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "groundColor": "127;127;127",
+            "skyColor": "255;255;255",
+            "top": "Z+"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Scene3D::DirectionalLight",
+          "name": "3D Sun Light",
+          "doubleParameters": {
+            "distanceFromCamera": 1500,
+            "elevation": 40,
+            "frustumSize": 4000,
+            "intensity": 0.75,
+            "minimumShadowBias": 0,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "color": "255;255;255",
+            "shadowQuality": "medium",
+            "top": "Z+"
+          },
+          "booleanParameters": {
+            "isCastingShadow": true
+          }
+        }
+      ]
+    },
     {
       "ambientLightColorB": 200,
       "ambientLightColorG": 200,
@@ -3194,6 +5442,25 @@
       "visibility": true,
       "cameras": [],
       "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "defaultCameraBehavior": "do-nothing",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Leaderboard",
+      "renderingType": "2d",
+      "visibility": false,
+      "cameras": [],
+      "effects": []
     }
   ],
   "behaviorsSharedData": [
@@ -3226,8 +5493,16 @@
       "type": "ScalableCapability::ScalableBehavior"
     },
     {
+      "name": "ShakeObject_PositionAngle",
+      "type": "ShakeObject::ShakeObject_PositionAngle"
+    },
+    {
       "name": "ShakeObject_PositionAngleScale",
       "type": "ShakeObject::ShakeObject_PositionAngleScale"
+    },
+    {
+      "name": "SmoothCamera",
+      "type": "SmoothCamera::SmoothCamera"
     },
     {
       "name": "Text",
