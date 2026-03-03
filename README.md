@@ -1,5 +1,6 @@
-anggota tim lapor ketua
+Team Members:
 
-1. Arka Rizky
-2. Alpharidho 
-3. Muryh Veeda
+    Arka Rizky
+    Alpharidho
+    Muryh Veeda
+
